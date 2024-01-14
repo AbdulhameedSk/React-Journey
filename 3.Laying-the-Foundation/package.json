@@ -1,0 +1,27 @@
+{
+  "name": "3.laying-the-foundation",
+  "version": "1.0.0",
+  "description": "Laying-the-foundation",
+  "main": "App.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbdulhameedSk/React-Journey.git"
+  },
+  "author": "AbdulhameedSk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AbdulhameedSk/React-Journey/issues"
+  },
+  "homepage": "https://github.com/AbdulhameedSk/React-Journey#readme",
+  "dependencies": {
+    "parcel": "^2.11.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {}
+}

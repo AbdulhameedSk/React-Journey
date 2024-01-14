@@ -1,0 +1,30 @@
+{
+  "name": "2.igniting-our-app",
+  "version": "1.0.0",
+  "description": "We are Igniting out app",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbdulhameedSk/React-Journey.git"
+  },
+  "author": "SHAIK ABDULHAMEED",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AbdulhameedSk/React-Journey/issues"
+  },
+  "homepage": "https://github.com/AbdulhameedSk/React-Journey#readme",
+  "devDependencies": {
+    "parcel": "^2.11.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "punycode": "^2.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+    "browserslist":[
+"last 10 version"
+    ]
+  }
