@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <div className="header">
       <div className="logo">
-        <img src={myImage} alt="LOGO"></img>
+        <img src={myImage} alt="LOGO" />
       </div>
       <div className="nav-items">
         <ul>
@@ -22,9 +22,11 @@ const Header = () => {
 };
 
 const Card = (props) => {
+  const link = require(`./img/Biryani.jpg`);
+
   return (
     <div className="card">
-      <img src={props.src} alt={props.alt} />
+      <img src={props.link} alt={props.alt} />
       <h1>{props.name}</h1>
       <p className="price">Price: ${props.price}.00</p>
       <button onClick={() => alert("Item added to cart!")}>Add To Cart</button>
@@ -34,9 +36,18 @@ const Card = (props) => {
 
 const ItemList = (props) => {
   return (
-    <div className="item-list" style={{ display: "flex", justifyContent: "space-around" }}>
+    <div
+      className="item-list"
+      style={{ display: "flex", justifyContent: "space-around" }}
+    >
       {props.items.map((item) => (
-        <Card name={item.name} price={item.price} key={item.id} />
+        <Card
+          name={item.name}
+          price={item.price}
+          link={item.link}
+          alt={item.alt}
+          key={item.id}
+        />
       ))}
     </div>
   );
@@ -47,7 +58,17 @@ const Body = () => {
     <div className="body">
       <div className="search"> SEARCH </div>
       <div className="res-card">
-        <Card  src="" alt="BIRYANI" name="Biryani" price="100"> </Card>
+        <ItemList
+          items={[
+            {
+              id: 1,
+              name: "Biryani",
+              price: 100,
+              link : require(`./img/Biryani.jpg`),
+              alt: "BIRYANI",
+            },
+          ]}
+        />
       </div>
     </div>
   );
