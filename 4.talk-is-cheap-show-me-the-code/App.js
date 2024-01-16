@@ -1,12 +1,60 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import myImage from "./img/CraveCraft.png";
 
 const Header = () => {
   return (
-    <div>
-      <h1>Working</h1>
+    <div className="header">
+      <div className="logo">
+        <img src={myImage} alt="LOGO"></img>
+      </div>
+      <div className="nav-items">
+        <ul>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Support</li>
+          <li>Cart</li>
+          <li>Logout</li>
+        </ul>
+      </div>
     </div>
   );
+};
+
+const Card = (props) => {
+  return (
+    <div className="card">
+      <img src={props.src} alt={props.alt} />
+      <h1>{props.name}</h1>
+      <p className="price">Price: ${props.price}.00</p>
+      <button onClick={() => alert("Item added to cart!")}>Add To Cart</button>
+    </div>
+  );
+};
+
+const ItemList = (props) => {
+  return (
+    <div className="item-list" style={{ display: "flex", justifyContent: "space-around" }}>
+      {props.items.map((item) => (
+        <Card name={item.name} price={item.price} key={item.id} />
+      ))}
+    </div>
+  );
+};
+
+const Body = () => {
+  return (
+    <div className="body">
+      <div className="search"> SEARCH </div>
+      <div className="res-card">
+        <Card  src="" alt="BIRYANI" name="Biryani" price="100"> </Card>
+      </div>
+    </div>
+  );
+};
+
+const Footer = () => {
+  return <div className="footer"></div>;
 };
 
 const App = () => {
@@ -15,7 +63,9 @@ const App = () => {
       {/* header */}
       <Header />
       {/* body */}
+      <Body />
       {/* footer */}
+      <Footer />
     </div>
   );
 };

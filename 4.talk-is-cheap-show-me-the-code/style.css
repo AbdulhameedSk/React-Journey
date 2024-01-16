@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  border: 1px solid black;
+}
+
+.logo img {
+  max-width: 70px;
+  height: auto;
+  padding-left: 20px;
+}
+
+.nav-items ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 20px;
+}
+.nav-items ul li{
+  font: size 18px;
+}
