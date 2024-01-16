@@ -4,6 +4,8 @@
   "description": "Project start",
   "main": "App.js",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "author": "AbdulhameedSk",
@@ -12,5 +14,8 @@
     "parcel": "^2.11.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
   }
 }

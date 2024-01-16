@@ -1,22 +1,24 @@
 import React from "react";
-import { ReactDOM } from "react-dom/client";
+import ReactDOM from "react-dom";
 
-const header=()=>{
-    return (
-        
-    )
-}
-
-const App=()=>{
-    <div className="app">
-        {/* header */}
-
-        {/* body */}
-
-        {/* footer */}
-
+const Header = () => {
+  return (
+    <div>
+      <h1>Working</h1>
     </div>
-}
+  );
+};
 
-const root = document.ReactDOM(document.getElementById("root"));
-root.render("</>");
+const App = () => {
+  return (
+    <div className="app">
+      {/* header */}
+      <Header />
+      {/* body */}
+      {/* footer */}
+    </div>
+  );
+};
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
