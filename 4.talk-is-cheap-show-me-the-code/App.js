@@ -22,17 +22,22 @@ const Header = () => {
 };
 
 const Card = (props) => {
-  const link = require(`./img/Biryani.jpg`);
-
   return (
     <div className="card">
       <img src={props.link} alt={props.alt} />
-      <h1>{props.name}</h1>
-      <p className="price">Price: ${props.price}.00</p>
+      <h4>{props.resname}</h4>
+      <p>{props.at}</p>
+      {console.log(props.reach)}
+      <ul>
+        <li>{props.rating}</li>
+        <li>{props.reach}</li>
+        <li className="price">Price: ${props.price}.00</li>
+      </ul>
       <button onClick={() => alert("Item added to cart!")}>Add To Cart</button>
     </div>
   );
 };
+
 
 const ItemList = (props) => {
   return (
@@ -42,10 +47,13 @@ const ItemList = (props) => {
     >
       {props.items.map((item) => (
         <Card
-          name={item.name}
-          price={item.price}
           link={item.link}
           alt={item.alt}
+          resname={item.resname}
+          at={item.at}
+          rating={item.rating}
+          reach={item.reach}
+          price={item.price}
           key={item.id}
         />
       ))}
@@ -61,11 +69,14 @@ const Body = () => {
         <ItemList
           items={[
             {
-              id: 1,
-              name: "Biryani",
-              price: 100,
-              link : require(`./img/Biryani.jpg`),
+              link: require(`./img/Biryani.jpg`),
               alt: "BIRYANI",
+              resname: "BhaiPoint",
+              at: "Halal", // This 'at' is not defined in the ItemList component
+              rating: 4.3,
+              reach: "20min",
+              price: 100,
+              id: 1,
             },
           ]}
         />
