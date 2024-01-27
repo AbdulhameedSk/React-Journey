@@ -38,13 +38,9 @@ const Card = (props) => {
   );
 };
 
-
 const ItemList = (props) => {
   return (
-    <div
-      className="item-list"
-      style={{ display: "flex", justifyContent: "space-around" }}
-    >
+    <div className="item-list">
       {props.items.map((item) => (
         <Card
           link={item.link}
@@ -78,6 +74,55 @@ const Body = () => {
               price: 100,
               id: 1,
             },
+            {
+              link: require(`./img/Biryani.jpg`),
+              alt: "BIRYANI",
+              resname: "BhaiPoint",
+              at: "Halal", // This 'at' is not defined in the ItemList component
+              rating: 4.3,
+              reach: "20min",
+              price: 100,
+              id: 1,
+            },
+            {
+              link: require(`./img/Biryani.jpg`),
+              alt: "BIRYANI",
+              resname: "BhaiPoint",
+              at: "Halal", // This 'at' is not defined in the ItemList component
+              rating: 4.3,
+              reach: "20min",
+              price: 100,
+              id: 1,
+            },
+            {
+              link: require(`./img/Biryani.jpg`),
+              alt: "BIRYANI",
+              resname: "BhaiPoint",
+              at: "Halal", // This 'at' is not defined in the ItemList component
+              rating: 4.3,
+              reach: "20min",
+              price: 100,
+              id: 1,
+            },
+            {
+              link: require(`./img/Biryani.jpg`),
+              alt: "BIRYANI",
+              resname: "BhaiPoint",
+              at: "Halal", // This 'at' is not defined in the ItemList component
+              rating: 4.3,
+              reach: "20min",
+              price: 100,
+              id: 1,
+            },{
+              link: require(`./img/Biryani.jpg`),
+              alt: "BIRYANI",
+              resname: "BhaiPoint",
+              at: "Halal", // This 'at' is not defined in the ItemList component
+              rating: 4.3,
+              reach: "20min",
+              price: 100,
+              id: 1,
+            }
           ]}
         />
       </div>

@@ -1,7 +1,9 @@
+/* HEADER */
+
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center; 
+  align-items: center;
   border: 1px solid black;
 }
 
@@ -17,6 +19,34 @@
   list-style: none;
   padding: 20px;
 }
-.nav-items ul li{
+.nav-items ul li {
   font: size 18px;
+}
+
+/* CARD */
+.card {
+  background: #f0f0f0;
+  width: 230px;
+  padding: 6px;
+}
+.card > img {
+  height: 150px;
+  width: 230px;
+}
+
+.card > ul {
+  display: flex;
+  list-style: none;
+}
+.card > ul > li {
+  padding-right: 10px;
+}
+
+.card:hover {
+  border: 1px solid black;
+}
+.item-list{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-around;
 }
