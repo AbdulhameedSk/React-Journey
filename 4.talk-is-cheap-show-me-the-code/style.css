@@ -26,13 +26,13 @@
 /* CARD */
 .card {
   background: #f0f0f0;
-  width: 230px;
+  width: 250px;
   padding: 6px;
-  margin-bottom: 10px;
+  margin: 15px;
 }
 .card > img {
-  height: 150px;
-  width: 230px;
+  height: 170px;
+  width: 250px;
 }
 
 .card > ul {
@@ -46,8 +46,8 @@
 .card:hover {
   border: 1px solid black;
 }
-.item-list{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content: space-around;
+.res-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
