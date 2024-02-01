@@ -1270,8 +1270,29 @@ const Body = () => {
   return (
     <div className="body">
       <div className="search"> SEARCH </div>
-      <div className="res-card">
+      <div className="res-cards">
         <Card resData={resList[0]} />
+        <Card resData={resList[1]} />
+
+        <Card resData={resList[2]} />
+
+        <Card resData={resList[3]} />
+
+        <Card resData={resList[4]} />
+
+        <Card resData={resList[5]} />
+        <Card resData={resList[6]} />
+        <Card resData={resList[7]} />
+
+        <Card resData={resList[8]} />
+
+        <Card resData={resList[9]} />
+
+        <Card resData={resList[10]} />
+        <Card resData={resList[11]} />
+        <Card resData={resList[12]} />
+        <Card resData={resList[13]} />
+        <Card resData={resList[14]} />
       </div>
     </div>
   );
