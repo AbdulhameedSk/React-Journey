@@ -21,6 +21,83 @@ const Header = () => {
   );
 };
 
+const resObj = {
+  info: {
+    id: "312149",
+    name: "Wow! Momo",
+    cloudinaryImageId: "5a148e63e9c54942e37627da1aa156be",
+    locality: "Banjara Hills",
+    areaName: "Banjara Hills",
+    costForTwo: "₹300 for two",
+    cuisines: [
+      "Tibetan",
+      "Healthy Food",
+      "Asian",
+      "Chinese",
+      "Snacks",
+      "Continental",
+      "Desserts",
+      "Beverages",
+    ],
+    avgRating: 4.1,
+    parentId: "1776",
+    avgRatingString: "4.1",
+    totalRatingsString: "1K+",
+    sla: {
+      deliveryTime: 44,
+      lastMileTravel: 6.4,
+      serviceability: "SERVICEABLE",
+      slaString: "40-45 mins",
+      lastMileTravelString: "6.4 km",
+      iconType: "ICON_TYPE_EMPTY",
+    },
+    availability: {
+      nextCloseTime: "2024-02-02 01:00:00",
+      opened: true,
+    },
+    badges: {},
+    isOpen: true,
+    type: "F",
+    badgesV2: {
+      entityBadges: {
+        imageBased: {},
+        textBased: {},
+        textExtendedBadges: {},
+      },
+    },
+    aggregatedDiscountInfoV3: {
+      header: "ITEMS",
+      subHeader: "AT ₹99",
+    },
+    orderabilityCommunication: {
+      title: {},
+      subTitle: {},
+      message: {},
+      customIcon: {},
+    },
+    differentiatedUi: {
+      displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+      differentiatedUiMediaDetails: {
+        mediaType: "ADS_MEDIA_ENUM_IMAGE",
+        lottie: {},
+        video: {},
+      },
+    },
+    reviewsSummary: {},
+    displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+    restaurantOfferPresentationInfo: {},
+  },
+  analytics: {
+    context: "seo-data-555f1aab-793d-43b0-9dfc-196c22c2cb8e",
+  },
+  cta: {
+    link: "https://www.swiggy.com/restaurants/wow-momo-banjara-hills-hyderabad-312149",
+    text: "RESTAURANT_MENU",
+    type: "WEBLINK",
+  },
+  widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
+};
+
 const Card = (props) => {
   return (
     <div className="card">
@@ -113,7 +190,8 @@ const Body = () => {
               reach: "20min",
               price: 100,
               id: 1,
-            },{
+            },
+            {
               link: require(`./img/Biryani.jpg`),
               alt: "BIRYANI",
               resname: "BhaiPoint",
@@ -122,7 +200,7 @@ const Body = () => {
               reach: "20min",
               price: 100,
               id: 1,
-            }
+            },
           ]}
         />
       </div>
