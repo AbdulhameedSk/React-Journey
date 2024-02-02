@@ -1245,21 +1245,29 @@ const resList = [
 ];
 const Card = (props) => {
   const { resData } = props;
+  const {
+    cloudinaryImageId,
+    name,
+    cuisines,
+    avgRating,
+    costForTwo,
+    deliveryTime,
+  } = resData?.info;
   return (
     <div className="card">
       <img
         src={
           "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
-          resData.info.cloudinaryImageId
+          cloudinaryImageId
         }
         alt="FOOD"
       />
-      <h4>{resData.info.name}</h4>
-      <p>{resData.info.cuisines ? resData.info.cuisines.join(", ") : " "}</p>
+      <h4>{name}</h4>
+      <p>{cuisines ? cuisines.join(", ") : " "}</p>
       <ul>
-        <li>{resData.info.avgRating}</li>
-        <li>{resData.info.sla.deliveryTime + "min"}</li>
-        <li className="price">Price: {resData.info.costForTwo}</li>
+        <li>{avgRating}</li>
+        <li>{deliveryTime + "min"}</li>
+        <li className="price">Price: {costForTwo}</li>
       </ul>
       <button onClick={() => alert("Item added to cart!")}>Add To Cart</button>
     </div>
@@ -1271,28 +1279,9 @@ const Body = () => {
     <div className="body">
       <div className="search"> SEARCH </div>
       <div className="res-cards">
-        <Card resData={resList[0]} />
-        <Card resData={resList[1]} />
-
-        <Card resData={resList[2]} />
-
-        <Card resData={resList[3]} />
-
-        <Card resData={resList[4]} />
-
-        <Card resData={resList[5]} />
-        <Card resData={resList[6]} />
-        <Card resData={resList[7]} />
-
-        <Card resData={resList[8]} />
-
-        <Card resData={resList[9]} />
-
-        <Card resData={resList[10]} />
-        <Card resData={resList[11]} />
-        <Card resData={resList[12]} />
-        <Card resData={resList[13]} />
-        <Card resData={resList[14]} />
+        {resList.map((res) => (
+          <Card resData={res} />
+        ))}
       </div>
     </div>
   );
