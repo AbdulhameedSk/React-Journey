@@ -1,25 +1,6 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import myImage from "./img/CraveCraft.png";
-
-const Header = () => {
-  return (
-    <div className="header">
-      <div className="logo">
-        <img src={myImage} alt="LOGO" />
-      </div>
-      <div className="nav-items">
-        <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Support</li>
-          <li>Cart</li>
-          <li>Logout</li>
-        </ul>
-      </div>
-    </div>
-  );
-};
+import ReactDOM from "react-dom/client";
+import Header from "./components/Header";
 
 const resList = [
   {
