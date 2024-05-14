@@ -1,6 +1,8 @@
 import CDN from "./utils/constants";
 const Card = (props) => {
   const { resData } = props;
+  // In this code snippet, const { resData } = props; is using destructuring assignment to extract the resData property from the props object. It's equivalent to const resData = props.resData;, but it's a more concise syntax.
+
   const {
     cloudinaryImageId,
     name,
