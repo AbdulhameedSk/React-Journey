@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import Card from "./Card";
 import resList from "./utils/mockdata";
-
+import Shimmer from "./Shimmer";
 const Body = () => {
-  const [res, setRes] = useState(resList);
+  // const [res, setRes] = useState([resList]);
+  const [res, setRes] = useState([]);
   useEffect(() => {
     fetchData();
   }, []);
@@ -20,6 +21,11 @@ const Body = () => {
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
+
+  if (res.length === 0) {
+    return <Shimmer />;
+  }
+
   return (
     <div className="body">
       <div className="filter">
