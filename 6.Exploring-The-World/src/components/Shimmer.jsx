@@ -1,10 +1,26 @@
-import { ShimmerSimpleGallery } from "react-shimmer-effects";
-
 const Shimmer = () => {
   return (
     <>
-      <ShimmerSimpleGallery height={250} width={250} rounded />;
-      <ShimmerSimpleGallery height={250} width={250} rounded />;
+      <div className="shimmer-container">
+        <div className="shimmer-card"></div>
+        <div className="shimmer-card"></div>
+        <div className="shimmer-card"></div>
+        <div className="shimmer-card"></div>
+        <div className="shimmer-card"></div>
+        <div className="shimmer-card"></div>
+        <div className="shimmer-card"></div>
+        <div className="shimmer-card"></div>
+        <div className="shimmer-card"></div>
+        <div className="shimmer-card"></div>
+        <div className="shimmer-card"></div>
+        <div className="shimmer-card"></div>
+        <div className="shimmer-card"></div>
+        <div className="shimmer-card"></div>
+        <div className="shimmer-card"></div>
+        <div className="shimmer-card"></div>
+        <div className="shimmer-card"></div>
+        <div className="shimmer-card"></div>
+      </div>
     </>
   );
 };
