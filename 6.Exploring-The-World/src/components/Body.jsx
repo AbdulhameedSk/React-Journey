@@ -22,8 +22,11 @@ const Body = () => {
     );
   };
 
+  const [search, setSearch] = useState("");
 
-  return res.length===0 ? <Shimmer/>: (
+  return res.length === 0 ? (
+    <Shimmer />
+  ) : (
     <div className="body">
       <div className="filter">
         <button
@@ -35,6 +38,16 @@ const Body = () => {
         >
           Top Rated Restaurants
         </button>{" "}
+        <input
+          type="text"
+          className="search"
+          placeholder="search"
+          value={search}
+          onChange={(e) => {
+            setSearch(e.target.value);
+          }}
+        />{" "}
+        <button>search</button>
       </div>
       <div className="res-cards">
         {res.map((rest) => (
