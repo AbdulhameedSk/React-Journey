@@ -2,9 +2,12 @@ import { useEffect, useState } from "react";
 import Card from "./Card";
 import resList from "./utils/mockdata";
 import Shimmer from "./Shimmer";
+
 const Body = () => {
-  // const [res, setRes] = useState([resList]);
   const [res, setRes] = useState([]);
+  const [fil, setFil] = useState([]);
+  const [search, setSearch] = useState("");
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -17,53 +20,57 @@ const Body = () => {
     console.log(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
-    setRes(
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
+    const restaurants =
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants || [];
+    setRes(restaurants);
+    setFil(restaurants);
   };
 
-  const [search, setSearch] = useState("");
+  const handleFilter = () => {
+    const filtered = res.filter((res) => res.info.avgRating > 4.4);
+    setFil(filtered);
+  };
+
+  const handleSearch = () => {
+    if (search !== "") {
+      const filtered = res.filter((e) =>
+        e?.info?.name.toLowerCase().includes(search.toLowerCase())
+      );
+      if (filtered.length === 0) {
+        setFil(res);
+        alert("No results found");
+      }
+      setFil(filtered);
+    } else {
+      setFil(res);
+    }
+  };
 
   return res.length === 0 ? (
     <Shimmer />
   ) : (
     <div className="body">
       <div className="filter">
-        <button
-          className="filter-btn"
-          onClick={() => {
-            const filtered = resList.filter((res) => res.info.avgRating > 4.4);
-            setRes(filtered);
-          }}
-        >
+        <button className="filter-btn" onClick={handleFilter}>
           Top Rated Restaurants
-        </button>{" "}
+        </button>
         <input
           type="text"
           className="search"
           placeholder="search"
           value={search}
-          onChange={(e) => {
-            setSearch(e.target.value);
-          }}
-        />{" "}
-        <button
-          onClick={() => {
-            const filtered = res.filter(
-              (e) => e?.info?.name .includes(search) 
-            );
-            setRes(filtered);
-          }}
-        >
-          search
-        </button>
+          onChange={(e) => setSearch(e.target.value)}
+        />
+        <button onClick={handleSearch}>Search</button>
       </div>
       <div className="res-cards">
-        {res.map((rest) => (
+        {fil.map((rest) => (
           <Card key={rest.info.id} resData={rest} />
         ))}
       </div>
     </div>
   );
 };
+
 export default Body;
