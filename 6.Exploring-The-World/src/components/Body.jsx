@@ -47,7 +47,16 @@ const Body = () => {
             setSearch(e.target.value);
           }}
         />{" "}
-        <button>search</button>
+        <button
+          onClick={() => {
+            const filtered = res.filter(
+              (e) => e?.info?.name .includes(search) 
+            );
+            setRes(filtered);
+          }}
+        >
+          search
+        </button>
       </div>
       <div className="res-cards">
         {res.map((rest) => (
