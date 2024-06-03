@@ -1,15 +1,15 @@
 import myImage from "./img/CraveCraft.png";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 const Header = () => {
-  const [btn,setbtn]=useState("Login")
-  const toggle=()=>{
-    if(btn==="Login"){
-      setbtn("Logout")
+  const [btn, setbtn] = useState("Login");
+  const toggle = () => {
+    if (btn === "Login") {
+      setbtn("Logout");
+    } else {
+      setbtn("Login");
     }
-    else{
-      setbtn("Login")
-    }
-  }
+  };
 
   return (
     <div className="header">
@@ -18,11 +18,13 @@ const Header = () => {
       </div>
       <div className="nav-items">
         <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Support</li>
+          <li><Link to={"/"}>Home</Link></li>
+          <li><Link to={"/about"}>About Us</Link></li>
+          <li><Link to={"/contactus"}>Contact Us</Link></li>
           <li>Cart</li>
-          <button className="login" onClick={toggle}>{btn}</button>
+          <button className="login" onClick={toggle} style={{ width: "80px" }}>
+            {btn}
+          </button>{" "}
         </ul>
       </div>
     </div>
