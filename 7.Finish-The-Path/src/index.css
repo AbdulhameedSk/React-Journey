@@ -1,0 +1,70 @@
+/* HEADER */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.logo img {
+  max-width: 70px;
+  height: auto;
+  padding-left: 20px;
+}
+
+.nav-items ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 20px;
+}
+.nav-items ul li {
+  font: size 18px;
+}
+
+/* CARD */
+.card {
+  background: #f0f0f0;
+  width: 250px;
+  padding: 6px;
+  margin: 15px;
+}
+.card > img {
+  height: 170px;
+  width: 250px;
+}
+
+.card > ul {
+  display: flex;
+  list-style: none;
+}
+.card > ul > li {
+  padding-right: 10px;
+}
+
+.card:hover {
+  border: 1px solid black;
+}
+.res-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.filter {
+  padding: 10px;
+}
+.shimmer-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+.shimmer-card{
+  width:250px;
+  height: 330px;
+  background-color: #f0f0f0;
+  margin: 22px;
+}
+
+.login{
+  cursor: pointer;
+}
