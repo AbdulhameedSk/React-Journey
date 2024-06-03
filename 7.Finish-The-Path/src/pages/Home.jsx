@@ -6,7 +6,6 @@ const Home = () => {
   return (
     <div className="app">
       {/* header */}
-      <Header />
       {/* body */}
       <Body />
       {/* footer */}

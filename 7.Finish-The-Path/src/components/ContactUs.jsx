@@ -1,7 +1,7 @@
 import Header from "./Header";
 const ContactUs = () => {
 
-  return <div><Header/>
+  return <div>
     ContactUs</div>;
 };
 

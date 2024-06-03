@@ -3,7 +3,6 @@ import Header from "./Header";
 const About = () => {
   return (
     <div>
-      <Header />
       <h1>About Us</h1>
       <p>
         Welcome to our app! We are a food delivery service similar to Swiggy.
